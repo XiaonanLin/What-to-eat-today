@@ -59,7 +59,7 @@ public class arrange {
             }
 
             int r = random.nextInt(8);
-            food f = (food) list.get(r);
+            food f = list.get(r);
             while(true) {
                 //用来限制一周内吃超过X元的食物的次数不能超过N次
                 while (true) {
@@ -69,7 +69,7 @@ public class arrange {
                         if (count[r] >= n) {
                             //超过了就重新获取
                             r = random.nextInt(8);
-                            f = (food) list.get(r);
+                            f = list.get(r);
                         } else {
                             break;
                         }
@@ -83,7 +83,7 @@ public class arrange {
                     if (count[r] >= m){
                         //即将超过重复次数就重新获取
                         r = random.nextInt(8);
-                        f = (food) list.get(r);
+                        f = list.get(r);
                     }else {
                         break;
                     }
@@ -93,7 +93,7 @@ public class arrange {
                 if (f.getPrice()>x){
                     if (count[r] >= n) {
                         r = random.nextInt(8);
-                        f = (food) list.get(r);
+                        f = list.get(r);
                     } else {
                         break;
                     }
